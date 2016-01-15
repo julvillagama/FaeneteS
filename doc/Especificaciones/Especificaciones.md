@@ -459,6 +459,8 @@ La aplicación deberá correr como mínimo en sistemas Windows 7, lo que exige u
 1. Diagramas UML:	ArgoUML v.034
 1. Diseño de Base de Datos:	MySQL Workbench 6.3.5
 1. S.O. Servidor:	Debian 8
+2. Control de versiones Git
+3. Editor Markdown MarkdownPad
 
 **1) Sistema Operativo Microsoft Windows 7**
 
@@ -498,6 +500,7 @@ El sistema operativo en el servidor es una distribución de Debian 8 64-bit con 
 Para gestionar los cambios que se vayan realizando en cualquier archivo del proyecto se usa el software Git. Existe un repositorio local en la máquina del programador y otro remoto alojado en GitHub. El repositorio remoto es público y accesible desde ésta dirección: [https://github.com/julvillagama/FaeneteS](https://github.com/julvillagama/FaeneteS "Repositorio remoto del proyecto")
 
 **10) Editor Markdown MarkdownPad**
+
 La documentación dentro de GitHub debe facilitarse en texto plano para poder ser consultada con cualquier herramienta no propietaria. En el repositorio se puede encontrar la versión en Markdown de los documentos generados en Microsoft Word. Para ello se ha usado el software MarkDownPad
 
 
