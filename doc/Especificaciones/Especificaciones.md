@@ -68,14 +68,16 @@ Julio Villamón Gamarra
 	- R032. El usuario podrá crear informes de llamadas institucionales	
 - [Requisitos Tecnológicos](#28)
 - [Tecnologías y Herramientas](#29) 
-	- 1) Sistema Operativo Microsoft Windows 7	
-	- 2) Entorno de Desarrollo Microsoft Visual Studio 2015	
-	- 3) Base de Datos MariaDB	
-	- 4) Suite Ofimática Microsoft Office 2013	
-	- 5) Planificación de Proyectos Gantt Project	
-	- 6) Diagramas UML ArgoUML	
-	- 7) Diseño de Base de Datos MySQL Workbench	
-	- 8) S.O. Servidor Debian 8	
+	- 01) Sistema Operativo Microsoft Windows 7	
+	- 02) Entorno de Desarrollo Microsoft Visual Studio 2015	
+	- 03) Base de Datos MariaDB	
+	- 04) Suite Ofimática Microsoft Office 2013	
+	- 05) Planificación de Proyectos Gantt Project	
+	- 06) Diagramas UML ArgoUML	
+	- 07) Diseño de Base de Datos MySQL Workbench	
+	- 08) S.O. Servidor Debian 8
+	- 09) Control de versiones Git 
+	- 10) Editor Markdown MarkdownPad	
 
 <a name="1"></a> 
 ## Introducción ##
@@ -485,5 +487,13 @@ Para el diseño visual de la base de datos se usa MySQL Workbench, con licencia 
 **8) S.O. Servidor Debian 8**
 
 El sistema operativo en el servidor es una distribución de Debian 8 64-bit con entorno gráfico. La elección de Linux es principalmente por ahorrar costes en la licencia de un Windows Server. El desarrollador conoce el sistema por haberlo usado en equipos de escritorio. No se usa la versión server, por sencillez se instala un entorno gráfico con los paquetes necesarios para desplegar la base de datos. El servidor no se administrará remotamente, se conectará un monitor, teclado y ratón para manejarlo
+
+**09) Control de versiones Git**
+
+Para gestionar los cambios que se vayan realizando en cualquier archivo del proyecto se usa el software Git. Existe un repositorio local en la máquina del programador y otro remoto alojado en GitHub. El repositorio remoto es público y accesible desde ésta dirección: [https://github.com/julvillagama/FaeneteS](https://github.com/julvillagama/FaeneteS "Repositorio remoto del proyecto")
+
+**10) Editor Markdown MarkdownPad**
+La documentación dentro de GitHub debe facilitarse en texto plano para poder ser consultada con cualquier herramienta no propietaria. En él repositorio se puede encontrar la versión en Markdown de los documentos generados en Microsoft Word. Para ello se ha usado el software MarkDownPad
+
 
 
