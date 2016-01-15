@@ -1,6 +1,11 @@
-Versión: 1.0.3Gestión Administrativa en el Decanato de los Registros de la Propiedad de la Comunidad Valenciana
-# FaeneteS #
-Especificación de requisitos
+Versión: 1.0.3
+
+Gestión Administrativa en el Decanato de los Registros de la Propiedad de la Comunidad Valenciana
+
+# FaeneteS #
+
+Especificación de requisitos
+
 Julio Villamón Gamarra
 
 26-11-2015
@@ -493,7 +498,7 @@ El sistema operativo en el servidor es una distribución de Debian 8 64-bit con 
 Para gestionar los cambios que se vayan realizando en cualquier archivo del proyecto se usa el software Git. Existe un repositorio local en la máquina del programador y otro remoto alojado en GitHub. El repositorio remoto es público y accesible desde ésta dirección: [https://github.com/julvillagama/FaeneteS](https://github.com/julvillagama/FaeneteS "Repositorio remoto del proyecto")
 
 **10) Editor Markdown MarkdownPad**
-La documentación dentro de GitHub debe facilitarse en texto plano para poder ser consultada con cualquier herramienta no propietaria. En él repositorio se puede encontrar la versión en Markdown de los documentos generados en Microsoft Word. Para ello se ha usado el software MarkDownPad
+La documentación dentro de GitHub debe facilitarse en texto plano para poder ser consultada con cualquier herramienta no propietaria. En el repositorio se puede encontrar la versión en Markdown de los documentos generados en Microsoft Word. Para ello se ha usado el software MarkDownPad
 
 
 
