@@ -1,12 +1,23 @@
-﻿<Window x:Class="FaeneteS.MainWindow"
+﻿<Window x:Name="Inicio" x:Class="FaeneteS.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FaeneteS"
         mc:Ignorable="d"
-        Title="FaeneteS" Height="350" Width="525" Icon="Img/icono.ico">
-    <Grid>
-        
+        Title="FaeneteS" Icon="Img/icono.ico" WindowState="Maximized" Background="#FF5CA5D8">
+    <Grid x:Name="Rejilla" Margin="40" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="141*"/>
+            <RowDefinition Height="141*"/>
+            <RowDefinition Height="141*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="170*"/>
+        </Grid.ColumnDefinitions>
     </Grid>
+
 </Window>
