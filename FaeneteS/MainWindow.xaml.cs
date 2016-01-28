@@ -24,5 +24,14 @@ namespace FaeneteS
         {
             InitializeComponent();
         }
+
+        private void btn_salir_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("¿Seguro que quiere salir?", "Ventana de confirmación", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
