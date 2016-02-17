@@ -1,0 +1,42 @@
+﻿<Window x:Class="FaeneteS.Configuracion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FaeneteS"
+        mc:Ignorable="d"
+        Title="Faenetes - Configuración" Height="300" Width="300" Icon="Img/icono.ico" WindowState="Maximized" Background="#FF5CA5D8" Closing="Window_Closing">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Menu x:Name="menuConfiguracion" Grid.Row="0">
+            <MenuItem Header="_Ayuda" />
+            <MenuItem Header="_Salir" />
+        </Menu>
+
+        <TabControl x:Name="TabConfiguracion" Grid.Row="1" Margin="0,10" HorizontalContentAlignment="Left">
+            <TabItem Width="90" Header="Registros">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Width="90" Header="Trabajadores">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Width="90" Header="Vias">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Width="90" Header="Preparadores">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+        <StatusBar Grid.Row="2" Height="22">
+            <StatusBarItem>
+                <TextBlock>Ready</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+    
+</Window>

@@ -55,7 +55,7 @@
         </Border>
 <!--BOTONES CONFIGURACION Y SALIR-->
         <StackPanel x:Name="panel_botones_configuracion_y_salir" Grid.Column="3" Margin="20" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="btn_configuracion" Content="CONFIGURACIÓN" Padding="10" HorizontalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+            <Button x:Name="btn_configuracion" Content="CONFIGURACIÓN" Padding="10" HorizontalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,10,0" Click="btn_configuracion_Click"/>
             <Button x:Name="btn_salir" Content="SALIR" Padding="10" HorizontalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btn_salir_Click"/>
         </StackPanel>
     </Grid>
