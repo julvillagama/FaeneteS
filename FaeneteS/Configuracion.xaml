@@ -19,16 +19,40 @@
 
         <TabControl x:Name="TabConfiguracion" Grid.Row="1" Margin="0,10" HorizontalContentAlignment="Left">
             <TabItem Width="90" Header="Registros">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="listBoxRegistros" Grid.Column="0"  VerticalAlignment="Top"/>
+                </Grid>
             </TabItem>
             <TabItem Width="90" Header="Trabajadores">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="listBoxTrabajadores" Grid.Column="0"  VerticalAlignment="Top"/>
+                </Grid>
             </TabItem>
             <TabItem Width="90" Header="Vias">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="listBoxVias" Grid.Column="0"  VerticalAlignment="Top"/>
+                </Grid>
             </TabItem>
             <TabItem Width="90" Header="Preparadores">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="200*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="listBoxPreparadores" Grid.Column="0"  VerticalAlignment="Top"/>
+                </Grid>
             </TabItem>
         </TabControl>
 
