@@ -34,10 +34,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FaeneteS.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,26 +68,203 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Configuracion.xaml">
+    <Compile Include="Academia\Academia.xaml.cs">
+      <DependentUpon>Academia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Academia\AddAcademia.xaml.cs">
+      <DependentUpon>AddAcademia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Academia\EditAcademia.xaml.cs">
+      <DependentUpon>EditAcademia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Actos\ActosOrganizados.xaml.cs">
+      <DependentUpon>ActosOrganizados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Actos\AddActo.xaml.cs">
+      <DependentUpon>AddActo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Actos\EditActo.xaml.cs">
+      <DependentUpon>EditActo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DtCorreos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DtCorreos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informe.xaml.cs">
+      <DependentUpon>Informe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InformeCorreos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeCorreos.Designer.cs">
+      <DependentUpon>InformeCorreos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Llamadas\AddLlamada.xaml.cs">
+      <DependentUpon>AddLlamada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\AddConsulta.xaml.cs">
+      <DependentUpon>AddConsulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\AddToBD.xaml.cs">
+      <DependentUpon>AddToBD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Consultas\ConsultasRecibidas.xaml.cs">
+      <DependentUpon>ConsultasRecibidas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\DeleteToBD.xaml.cs">
+      <DependentUpon>DeleteToBD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\EditConsulta.xaml.cs">
+      <DependentUpon>EditConsulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Correo\AddCorreo.xaml.cs">
+      <DependentUpon>AddCorreo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Correo\CorreoPostal.xaml.cs">
+      <DependentUpon>CorreoPostal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Correo\EditCorreo.xaml.cs">
+      <DependentUpon>EditCorreo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Llamadas\EditLlamada.xaml.cs">
+      <DependentUpon>EditLlamada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Llamadas\Llamadas.xaml.cs">
+      <DependentUpon>Llamadas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.xaml.cs">
+      <DependentUpon>Principal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quejas\AddQueja.xaml.cs">
+      <DependentUpon>AddQueja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quejas\EditQueja.xaml.cs">
+      <DependentUpon>EditQueja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quejas\QuejasPresentadas.xaml.cs">
+      <DependentUpon>QuejasPresentadas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.xaml.cs">
+      <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\UpdateToBD.xaml.cs">
+      <DependentUpon>UpdateToBD.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Academia\Academia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Academia\AddAcademia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Academia\EditAcademia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Actos\ActosOrganizados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Actos\AddActo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Actos\EditActo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Informe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Llamadas\AddLlamada.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Consultas\AddConsulta.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Configuracion\AddToBD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Configuracion\Configuracion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Configuracion.xaml.cs">
+    <Compile Include="Configuracion\Configuracion.xaml.cs">
       <DependentUpon>Configuracion.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataBase.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="Consultas\ConsultasRecibidas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Configuracion\DeleteToBD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Consultas\EditConsulta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Correo\AddCorreo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Correo\CorreoPostal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Correo\EditCorreo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Llamadas\EditLlamada.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Llamadas\Llamadas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Principal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Quejas\AddQueja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Quejas\EditQueja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Quejas\QuejasPresentadas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Splash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Configuracion\UpdateToBD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -91,10 +280,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeCorreos.resx">
+      <DependentUpon>InformeCorreos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DtCorreos.xsc">
+      <DependentUpon>DtCorreos.xsd</DependentUpon>
+    </None>
+    <None Include="DtCorreos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DtCorreos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DtCorreos.xss">
+      <DependentUpon>DtCorreos.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,9 +311,39 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Img\Splash.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Img\icono.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\add.png" />
+    <Resource Include="Img\edit.png" />
+    <Resource Include="Img\remove.png" />
+    <Resource Include="Img\save.png" />
+    <Resource Include="Img\shut_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\consultas.png" />
+    <Resource Include="Img\correos.png" />
+    <Resource Include="Img\llamadas.png" />
+    <Resource Include="Img\quejas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\informe.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

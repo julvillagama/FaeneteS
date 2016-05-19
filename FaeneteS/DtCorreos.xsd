@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DtCorreos" targetNamespace="http://tempuri.org/DtCorreos.xsd" xmlns:mstns="http://tempuri.org/DtCorreos.xsd" xmlns="http://tempuri.org/DtCorreos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DtCorreos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DtCorreos" msprop:Generator_UserDSName="DtCorreos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableCorreo" msprop:Generator_TableClassName="DataTableCorreoDataTable" msprop:Generator_TableVarName="tableDataTableCorreo" msprop:Generator_TablePropName="DataTableCorreo" msprop:Generator_RowDeletingName="DataTableCorreoRowDeleting" msprop:Generator_RowChangingName="DataTableCorreoRowChanging" msprop:Generator_RowEvHandlerName="DataTableCorreoRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableCorreoRowDeleted" msprop:Generator_UserTableName="DataTableCorreo" msprop:Generator_RowChangedName="DataTableCorreoRowChanged" msprop:Generator_RowEvArgName="DataTableCorreoRowChangeEvent" msprop:Generator_RowClassName="DataTableCorreoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="certificado" msprop:Generator_ColumnVarNameInTable="columncertificado" msprop:Generator_ColumnPropNameInRow="certificado" msprop:Generator_ColumnPropNameInTable="certificadoColumn" msprop:Generator_UserColumnName="certificado" type="xs:boolean" minOccurs="0" />
+              <xs:element name="nombreRemite" msprop:Generator_ColumnVarNameInTable="columnnombreRemite" msprop:Generator_ColumnPropNameInRow="nombreRemite" msprop:Generator_ColumnPropNameInTable="nombreRemiteColumn" msprop:Generator_UserColumnName="nombreRemite" type="xs:string" minOccurs="0" />
+              <xs:element name="contenido" msprop:Generator_ColumnVarNameInTable="columncontenido" msprop:Generator_ColumnPropNameInRow="contenido" msprop:Generator_ColumnPropNameInTable="contenidoColumn" msprop:Generator_UserColumnName="contenido" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

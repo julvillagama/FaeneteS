@@ -5,62 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FaeneteS"
         mc:Ignorable="d"
-        Title="Faenetes - Configuración" Height="300" Width="300" Icon="Img/icono.ico" WindowState="Maximized" Background="#FF5CA5D8" Closing="Window_Closing">
-    <Grid Margin="10">
+        Title="Configuración" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Height="400" Width="600" Background="#FFFFFFFF" BorderBrush="Black" BorderThickness="2" WindowStyle="None" Loaded="Window_Loaded">
+
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="22"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="285*"/>
         </Grid.RowDefinitions>
-        <Menu x:Name="menuConfiguracion" Grid.Row="0">
-            <MenuItem Header="_Ayuda" />
-            <MenuItem Header="_Salir" />
+
+        <Border Background="Red" Grid.Row="0">
+            <Label Content="Configuración" HorizontalAlignment="Center" Foreground="#FFFFFFFF" FontSize="24" FontWeight="Bold" VerticalAlignment="Center"/>
+        </Border>
+
+        <Menu x:Name="MenuPrincipal" Height="30" FontSize="16" VerticalAlignment="Center" Grid.Row="1">
+            <MenuItem x:Name="MenuRegistros" Header="_Registros" Click="MenuRegistros_Click"/>
+            <MenuItem x:Name="MenuTrabajadores" Header="_Trabajadores" Click="MenuTrabajadores_Click"/>
+            <MenuItem x:Name="MenuVias" Header="_Vias" Click="MenuVias_Click"/>
+            <MenuItem x:Name="MenuPreparadores" Header="_Preparadores" Click="MenuPreparadores_Click"/>
+            <MenuItem x:Name="MenuSalir" Header="_Salir" Click="MenuSalir_Click"/>
         </Menu>
 
-        <TabControl x:Name="TabConfiguracion" Grid.Row="1" Margin="0,10" HorizontalContentAlignment="Left">
-            <TabItem Width="90" Header="Registros">
-                <Grid Background="#FFE5E5E5" Margin="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="200"/>
-                        <ColumnDefinition Width="200*"/>
-                    </Grid.ColumnDefinitions>
-                    <ListBox x:Name="listBoxRegistros" Grid.Column="0"  VerticalAlignment="Top"/>
-                </Grid>
-            </TabItem>
-            <TabItem Width="90" Header="Trabajadores">
-                <Grid Background="#FFE5E5E5" Margin="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="200"/>
-                        <ColumnDefinition Width="200*"/>
-                    </Grid.ColumnDefinitions>
-                    <ListBox x:Name="listBoxTrabajadores" Grid.Column="0"  VerticalAlignment="Top"/>
-                </Grid>
-            </TabItem>
-            <TabItem Width="90" Header="Vias">
-                <Grid Background="#FFE5E5E5" Margin="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="200"/>
-                        <ColumnDefinition Width="200*"/>
-                    </Grid.ColumnDefinitions>
-                    <ListBox x:Name="listBoxVias" Grid.Column="0"  VerticalAlignment="Top"/>
-                </Grid>
-            </TabItem>
-            <TabItem Width="90" Header="Preparadores">
-                <Grid Background="#FFE5E5E5" Margin="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="200"/>
-                        <ColumnDefinition Width="200*"/>
-                    </Grid.ColumnDefinitions>
-                    <ListBox x:Name="listBoxPreparadores" Grid.Column="0"  VerticalAlignment="Top"/>
-                </Grid>
-            </TabItem>
-        </TabControl>
+        <DockPanel x:Name="PanelRegistros" Grid.Row="2">
+            <ListBox x:Name="listBoxRegistros" DockPanel.Dock="Top" Width="220" Height="100" HorizontalAlignment="Left" Margin="20"/>
+            <StackPanel Margin="20,0,0,0" DockPanel.Dock="Top" Orientation="Horizontal" >
+                <Button x:Name="btnAddRegistros" Content ="Añadir" Margin="0,0,20,0" Width="60" Click="btnAddRegistros_Click"/>
+                <Button x:Name="btnUpdateRegistros" Content="Modificar" Margin="0,0,20,0" Width="60" Click="btnUpdateRegistros_Click"/>
+                <Button x:Name="btnDeleteRegistros" Content="Eliminar" Width="60" Click="btnDeleteRegistros_Click"/>
+            </StackPanel>
+            <Label x:Name="lblRegistros" DockPanel.Dock="Bottom" Content="Registros" Margin="20,0,0,0" FontSize="16" VerticalAlignment="Bottom" />
+        </DockPanel>
 
-        <StatusBar Grid.Row="2" Height="22">
-            <StatusBarItem>
-                <TextBlock>Ready</TextBlock>
-            </StatusBarItem>
-        </StatusBar>
+        <DockPanel x:Name="PanelTrabajadores" Grid.Row="2" Visibility="Hidden">
+            <ListBox x:Name="listBoxTrabajadores" DockPanel.Dock="Top" Width="220" Height="100" HorizontalAlignment="Left" Margin="20"/>
+            <StackPanel Margin="20,0,0,0" DockPanel.Dock="Top" Orientation="Horizontal" >
+                <Button x:Name="btnAddTrabajadores" Content ="Añadir" Margin="0,0,20,0" Width="60" Click="btnAddTrabajadores_Click"/>
+                <Button x:Name="btnUpdateTrabajadores" Content="Modificar" Margin="0,0,20,0" Width="60" Click="btnUpdateTrabajadores_Click"/>
+                <Button x:Name="btnDeleteTrabajadores" Content="Eliminar" Width="60" Click="btnDeleteTrabajadores_Click"/>
+            </StackPanel>
+            <Label x:Name="lblTrabajadores" DockPanel.Dock="Bottom" Content="Trabajadores" Margin="20,0,0,0" FontSize="16" VerticalAlignment="Bottom"/>
+        </DockPanel>
+
+        <DockPanel x:Name="PanelVias" Grid.Row="2" Visibility="Hidden">
+            <ListBox x:Name="listBoxVias" DockPanel.Dock="Top" Width="220" Height="100" HorizontalAlignment="Left" Margin="20"/>
+            <StackPanel Margin="20,0,0,0" DockPanel.Dock="Top" Orientation="Horizontal" >
+                <Button x:Name="btnAddVias" Content ="Añadir" Margin="0,0,20,0" Width="60" Click="btnAddVias_Click"/>
+                <Button x:Name="btnUpdateVias" Content="Modificar" Margin="0,0,20,0" Width="60" Click="btnUpdateVias_Click"/>
+                <Button x:Name="btnDeleteVias" Content="Eliminar" Width="60" Click="btnDeleteVias_Click"/>
+            </StackPanel>
+            <Label x:Name="lblVias" DockPanel.Dock="Bottom" Content="Vias" Margin="20,0,0,0" FontSize="16" VerticalAlignment="Bottom"/>
+        </DockPanel>
+
+        <DockPanel x:Name="PanelPreparadores" Grid.Row="2" Visibility="Hidden">
+            <ListBox x:Name="listBoxPreparadores" DockPanel.Dock="Top" Width="220" Height="100" HorizontalAlignment="Left" Margin="20"/>
+            <StackPanel Margin="20,0,0,0" DockPanel.Dock="Top" Orientation="Horizontal" >
+                <Button x:Name="btnAddPreparadores" Content ="Añadir" Margin="0,0,20,0" Width="60" Click="btnAddPreparadores_Click"/>
+                <Button x:Name="btnUpdatePreparadores" Content="Modificar" Margin="0,0,20,0" Width="60" Click="btnUpdatePreparadores_Click"/>
+                <Button x:Name="btnDeletePreparadores" Content="Eliminar" Width="60" Click="btnDeletePreparadores_Click"/>
+            </StackPanel>
+            <Label x:Name="lblPreparadores" DockPanel.Dock="Bottom" Content="Preparadores" Margin="20,20,0,0" FontSize="16" VerticalAlignment="Bottom"/>
+        </DockPanel>
+
     </Grid>
-    
+
 </Window>

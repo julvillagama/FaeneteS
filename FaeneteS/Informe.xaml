@@ -1,0 +1,48 @@
+﻿<Window x:Class="FaeneteS.Informe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FaeneteS"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Informe" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Height="300" Width="600" Background="#FFFFFFFF" BorderBrush="Black" BorderThickness="2" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="64"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Border Background="Red" Grid.Row="0">
+            <Label Content="Informes" HorizontalAlignment="Center" Foreground="#FFFFFFFF" FontSize="24" FontWeight="Bold" VerticalAlignment="Center"/>
+        </Border>
+        <ToolBar Name="Toolbar" Height="64" Background="WhiteSmoke"  Grid.Row="1" HorizontalContentAlignment="Right" FlowDirection="RightToLeft" >
+            <Button Name="btnCloseFormConsulta" ToolTip="Salir" Click="btnCloseFormConsulta_Click" >
+                <Image Source="Img\shut_down.png" />
+            </Button>
+        </ToolBar>
+        <GroupBox Header="CONFIGURACIÓN" Margin="5" Grid.Row="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="10,20,10,10">
+                    <RadioButton x:Name="rbCorreos" GroupName="One" IsChecked="True" VerticalAlignment="Center" Margin="0,0,10,0" >Correos</RadioButton>
+                    <RadioButton x:Name="rbConsultas" GroupName="One" IsChecked="False" VerticalAlignment="Center" Margin="0,0,10,0" >Consultas</RadioButton>
+                    <RadioButton x:Name="rbQuejas" GroupName="One" IsChecked="False" VerticalAlignment="Center" Margin="0,0,10,0" >Quejas</RadioButton>
+                    <RadioButton x:Name="rbLlamadas" GroupName="One" IsChecked="False" VerticalAlignment="Center" Margin="0,0,10,0" >Llamadas</RadioButton>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,10,10">
+                    <Label x:Name="lblDesde" Content="Desde" IsEnabled="false"/>
+                    <DatePicker x:Name="dtDesde" Width="140" HorizontalAlignment="Center" Margin="0,0,10,0" Height="24" VerticalAlignment="Center" SelectedDate="{x:Static sys:DateTime.Now}"/>
+                    <Label x:Name="lblHasta" Content="Hasta" IsEnabled="false"/>
+                    <DatePicker x:Name="dtHasta" Width="140" HorizontalAlignment="Left" Margin="0,0,10,0" Height="24"  SelectedDate="{x:Static sys:DateTime.Now}"/>
+                    <Button x:Name="btnOkFecha" Content="Generar Informe" Width="100"  Click="btnOkFecha_Click" Grid.Row="2" Height="24" HorizontalAlignment="Right" Margin="50,0,0,0"  />
+                </StackPanel>
+                
+            </Grid>
+        </GroupBox>
+        
+    </Grid>
+</Window>

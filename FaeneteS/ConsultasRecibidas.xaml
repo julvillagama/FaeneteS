@@ -1,0 +1,49 @@
+﻿<Window x:Class="FaeneteS.ConsultasRecibidas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FaeneteS"
+        mc:Ignorable="d"
+        Title="ConsultasRecibidas" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Height="450" Width="700" Background="#FFFFFFFF" BorderBrush="Black" BorderThickness="2" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="64"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Border Background="Red" Grid.Row="0">
+            <Label Content="Consultas Recibidas" HorizontalAlignment="Center" Foreground="#FFFFFFFF" FontSize="24" FontWeight="Bold" VerticalAlignment="Center"/>
+        </Border>
+        <ToolBar Name="Toolbar" Height="64" Background="WhiteSmoke"  Grid.Row="1" >
+            <Button Name="btnAddConsulta" ToolTip="Añadir Consulta" Click="btnAddConsulta_Click">
+                <Image Source="Img/add.png" />
+            </Button>
+            <Button Name="btnDeleteConsulta" ToolTip="Eliminar Consulta" Click="btnDeleteConsulta_Click">
+                <Image Source="Img\remove.png" />
+            </Button>
+            <Button Name="btnEditConsulta" ToolTip="Editar Consulta">
+                <Image Source="Img\edit.png" />
+            </Button>
+            <Button Name="btnBuscar" ToolTip="Buscar">
+                <Image Source="Img\search.png" />
+            </Button>
+            <Button Name="btnCloseFormConsulta" ToolTip="Salir" Click="btnCloseFormConsulta_Click">
+                <Image Source="Img\shut_down.png" />
+            </Button>
+        </ToolBar>
+        <DataGrid x:Name="dataGrid" Grid.Row="2" Margin="5" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="_id" Header="Id" Binding="{Binding Path=_id}" Width="SizeToCells"/>
+                <DataGridTextColumn x:Name="fecha" Header="Fecha" Binding="{Binding Path=fecha,StringFormat=dd/MM/yyyy}" Width="SizeToCells"/> 
+                <DataGridTextColumn x:Name="nombre" Header="Nombre" Binding="{Binding Path=nombre}" Width="SizeToCells"/>
+                <DataGridTextColumn x:Name="consulta" Header="Consulta" Binding="{Binding Path=consulta}" Width="SizeToCells"/>
+                <DataGridTextColumn x:Name="via" Header="Via" Binding="{Binding Path=via}" Width="SizeToCells"/> 
+                <DataGridTextColumn x:Name="respuesta" Header="Respuesta" Binding="{Binding Path=respuesta}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Border Grid.Row="3" />
+
+
+    </Grid>
+</Window>

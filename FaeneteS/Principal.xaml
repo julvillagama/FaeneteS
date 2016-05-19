@@ -1,0 +1,58 @@
+﻿<Window x:Name="Principal1" x:Class="FaeneteS.Principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FaeneteS"
+        mc:Ignorable="d"
+        Title="Principal" Icon="Img/icono.ico" WindowState="Maximized" WindowStyle="None" ResizeMode="NoResize" Background="DarkGray" SizeChanged="Principal1_SizeChanged" Loaded="Principal1_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="145"/>
+            <RowDefinition Height="149*"/>
+            <RowDefinition Height="4"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <Border x:Name="Contenedor_Botones" Margin="20" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnConsultasRecibidas" Content="Consultas Recibidas" ToolTip="Consultas Recibidas" Style="{StaticResource btnNavigation}" Click="btnConsultasRecibidas_Click"/>
+                <Button x:Name="btnQuejasPresentadas" Content="Quejas Presentadas" ToolTip="Quejas Presentadas" Style="{StaticResource btnNavigation}" Click="btnQuejasPresentadas_Click"/>
+                <Button x:Name="btnCorreoPostal" Content="Correo Postal" ToolTip="Correo Postal" Style="{StaticResource btnNavigation}" Click="btnCorreoPostal_Click"/>
+                <Button x:Name="btnLlamadasInstitucionales" Content="Llamadas Institucionales" ToolTip="Llamadas Institucionales" Style="{StaticResource btnNavigation}" Click="btnLlamadasInstitucionales_Click"/>
+                <Button x:Name="btnAcademiaOpositores" Content="Academia de Opositores" ToolTip="Academia de Opositores" Style="{StaticResource btnNavigation}" Click="btnAcademiaOpositores_Click"/>
+                <Button x:Name="btnActosOrganizados" Content="Actos Organizados" ToolTip="Actos Organizados" Style="{StaticResource btnNavigation}" Click="btnActosOrganizados_Click"/>
+                <Button x:Name="btnGenerarInforme" Content="Generar Informe" ToolTip="Generar Informe" Style="{StaticResource btnNavigation}" Click="btnGenerarInforme_Click" />
+            </StackPanel>
+        </Border>
+        <Image x:Name="image" Source="Img/logo.png" ToolTip="Decanato Autonómico en la Comunidad Valenciana" Height="400" Grid.Row="1" Width="400" Margin="234,5" VerticalAlignment="Center"/>
+
+        <Border x:Name="Separador" Grid.Row="2" Background="WhiteSmoke"/>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="145*"/>
+                <ColumnDefinition Width="149*"/>
+                <ColumnDefinition Width="145*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border x:Name="BorderContenedorHora" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0">
+                <Label x:Name="lblHora" Foreground="WhiteSmoke" FontFamily="Arial" FontWeight="Bold" FontSize="26.667">Decanato CV</Label>
+            </Border>
+
+            <Border x:Name="BorderContenedorFecha" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+                <Label x:Name="lblFecha" Foreground="WhiteSmoke" FontFamily="Arial" FontWeight="Bold" FontSize="26.667">Registradores</Label>
+            </Border>
+            
+            <StackPanel x:Name="StackPanelBotonesInferiores" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="2">
+                <Button x:Name="btnInvisible" Content="X" ToolTip="Cerrar" Style="{StaticResource btnNavigation}" Width="0"/>
+                <Button x:Name="btnConfiguracion" Content="Configuración" ToolTip="Configuración" Style="{StaticResource btnNavigation}" Width="120" Click="btnConfiguracion_Click"/>
+                <Button x:Name="btnMinimizar" Content="-" ToolTip="Minimizar" Style="{StaticResource btnNavigation}" Width="70" Click="btnMinimizar_Click"/>
+                <Button x:Name="btnSalir" Content="X" ToolTip="Cerrar" Style="{StaticResource btnNavigation}" Width="70" Margin="10,10,0,10" Click="btnSalir_Click"/>
+            </StackPanel>
+
+            
+            
+        </Grid>
+
+    </Grid>
+</Window>
