@@ -17,13 +17,11 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para AddLlamada.xaml
     /// </summary>
-    public partial class AddLlamada : Window
+    public partial class AddLlamada : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
         private String fecha, nombre, consulta;
 
-        public AddLlamada()
+        public AddLlamada():base()
         {
             InitializeComponent();
         }

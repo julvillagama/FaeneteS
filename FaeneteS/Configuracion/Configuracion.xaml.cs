@@ -6,14 +6,13 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para Configuracion.xaml
     /// </summary>
-    public partial class Configuracion : Window
+    public partial class Configuracion : WindowBase
     {
-        private Conexion conexion = Conexion.Instancia;
         private String textoAdd = " ";
         private String textoUpdate = " ";
         private String textoDelete = " ";
 
-        public Configuracion()
+        public Configuracion():base()
         {
             InitializeComponent();
             MenuRegistros.IsChecked = true;

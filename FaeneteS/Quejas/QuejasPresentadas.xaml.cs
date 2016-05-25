@@ -9,15 +9,12 @@ namespace FaeneteS.Quejas
     /// <summary>
     /// Lógica de interacción para QuejasPresentadas.xaml
     /// </summary>
-    public partial class QuejasPresentadas : Window
+    public partial class QuejasPresentadas : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
-        private DataTable datos = new DataTable();
         private int itemSeleccionado = 0;
         private int filtro = 0;
 
-        public QuejasPresentadas()
+        public QuejasPresentadas():base()
         {        
             InitializeComponent();
             this.datos.Clear();

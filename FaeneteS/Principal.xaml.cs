@@ -9,7 +9,7 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para Principal.xaml
     /// </summary>
-    public partial class Principal : Window
+    public partial class Principal : WindowBase
     {
 
         private DispatcherTimer dispatcherTimer; // timer para reloj
@@ -21,9 +21,8 @@ namespace FaeneteS
         private Academia frmAcademia;
         private ActosOrganizados frmActos;
         private Informe frmInformes;
-        private Conexion conexion;
 
-        public Principal()
+        public Principal():base()
         {
             InitializeComponent();
             this.dispatcherTimer = new DispatcherTimer();

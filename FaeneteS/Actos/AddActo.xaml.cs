@@ -18,13 +18,12 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para AddActo.xaml
     /// </summary>
-    public partial class AddActo : Window
+    public partial class AddActo : WindowBase
     {
 
-        private Conexion conexion = Conexion.Instancia;
         private String fecha, acto, lugar, empresa, menu, precio, notas;
 
-        public AddActo()
+        public AddActo():base()
         {
             InitializeComponent();
         }

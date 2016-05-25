@@ -6,11 +6,11 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para DeleteToBD.xaml
     /// </summary>
-    public partial class DeleteToBD : Window
+    public partial class DeleteToBD : WindowBase
     {
         public String texto { get; set; }
 
-        public DeleteToBD(String name, String borrarTrabajador)
+        public DeleteToBD(String name, String borrarTrabajador):base()
         {
             InitializeComponent();
             titulo.Content = titulo.Content.ToString() + " " + name;

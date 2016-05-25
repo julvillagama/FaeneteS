@@ -1,10 +1,11 @@
-﻿<Window x:Class="FaeneteS.Llamadas"
+﻿<base:WindowBase x:Class="FaeneteS.Llamadas"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:FaeneteS"
+        xmlns:base="clr-namespace:FaeneteS"
         mc:Ignorable="d"
         Title="Llamadas" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Height="450" Width="700" Background="#FFFFFFFF" BorderBrush="Black" BorderThickness="2" WindowStyle="None">
     <Grid>
@@ -66,4 +67,4 @@
         </DataGrid>
         <Border Grid.Row="3" />
     </Grid>
-</Window>
+</base:WindowBase>

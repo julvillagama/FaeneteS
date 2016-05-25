@@ -18,15 +18,12 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para ActosOrganizados.xaml
     /// </summary>
-    public partial class ActosOrganizados : Window
+    public partial class ActosOrganizados : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
-        private DataTable datos = new DataTable();
         private int itemSeleccionado = 0;
         private int filtro = 0;
 
-        public ActosOrganizados()
+        public ActosOrganizados():base()
         {       
             InitializeComponent();
             this.datos.Clear();

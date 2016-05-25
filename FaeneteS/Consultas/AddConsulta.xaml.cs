@@ -8,13 +8,12 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para AddConsulta.xaml
     /// </summary>
-    public partial class AddConsulta : Window
+    public partial class AddConsulta : WindowBase
     {
 
-        private Conexion conexion = Conexion.Instancia;
         private String fecha, nombre, consulta, via, respuesta;
 
-        public AddConsulta()
+        public AddConsulta():base()
         {
             InitializeComponent();
             foreach (String via in conexion.listadoVias()) // Loop llena listBoxVias

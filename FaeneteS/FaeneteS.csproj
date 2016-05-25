@@ -97,6 +97,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DtCorreos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Informe.xaml.cs">
       <DependentUpon>Informe.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,7 @@
     <Compile Include="Configuracion\UpdateToBD.xaml.cs">
       <DependentUpon>UpdateToBD.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowBase.cs" />
     <Page Include="Academia\Academia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -291,6 +295,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="DtCorreos.xsc">
       <DependentUpon>DtCorreos.xsd</DependentUpon>
     </None>

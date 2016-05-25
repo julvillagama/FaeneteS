@@ -10,7 +10,7 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para Splash.xaml
     /// </summary>
-    public partial class Splash : Window
+    public partial class Splash
     {
 
         private DispatcherTimer dispatcherTimer;
@@ -36,7 +36,7 @@ namespace FaeneteS
 
         private void CorrerProceso()
         {
-            conexion = Conexion.Instancia;
+            conexion = Conexion.Instancia;   
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

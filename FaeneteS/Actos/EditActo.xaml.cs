@@ -17,14 +17,13 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para EditActo.xaml
     /// </summary>
-    public partial class EditActo : Window
+    public partial class EditActo : WindowBase
     {
 
-        private Conexion conexion = Conexion.Instancia;
         private String fecha, acto, lugar, empresa, menu, precio, notas;
         private int _id;
 
-        public EditActo(int _id, String fecha, String acto, String lugar, String empresa, String menu, String precio, String notas)
+        public EditActo(int _id, String fecha, String acto, String lugar, String empresa, String menu, String precio, String notas):base()
         {
             InitializeComponent();
             this._id = _id;

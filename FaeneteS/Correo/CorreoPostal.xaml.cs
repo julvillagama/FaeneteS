@@ -9,16 +9,13 @@ namespace FaeneteS.Correo
     /// <summary>
     /// Lógica de interacción para CorreoPostal.xaml
     /// </summary>
-    public partial class CorreoPostal : Window
+    public partial class CorreoPostal : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
-        private DataTable datos = new DataTable();
         private int itemSeleccionado = 0;
         private int filtro = 0;
         private Boolean entrada;
 
-        public CorreoPostal()
+        public CorreoPostal():base()
         {
             InitializeComponent();
             this.datos.Clear();

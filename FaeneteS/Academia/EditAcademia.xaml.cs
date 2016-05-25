@@ -17,14 +17,14 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para EditAcademia.xaml
     /// </summary>
-    public partial class EditAcademia : Window
+    public partial class EditAcademia : WindowBase
     {
 
         private Conexion conexion = Conexion.Instancia;
         private String fecha, preparador, opositor, material;
         private int _id;
 
-        public EditAcademia(int _id, String fecha, String preparador, String opositor, String material)
+        public EditAcademia(int _id, String fecha, String preparador, String opositor, String material):base()
         {
             InitializeComponent();
             InitializeComponent();

@@ -10,14 +10,12 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para ConsultasRecibidas.xaml
     /// </summary>
-    public partial class ConsultasRecibidas : Window
+    public partial class ConsultasRecibidas : WindowBase
     {
-        private Conexion conexion = Conexion.Instancia;
-        private DataTable datos = new DataTable();
         private int itemSeleccionado = 0;
         private int filtro = 0;
 
-        public ConsultasRecibidas()
+        public ConsultasRecibidas():base()
         {          
             InitializeComponent();
             this.datos.Clear();

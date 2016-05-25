@@ -8,14 +8,12 @@ namespace FaeneteS.Quejas
     /// <summary>
     /// Lógica de interacción para EditQueja.xaml
     /// </summary>
-    public partial class EditQueja : Window
+    public partial class EditQueja : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
         private String fecha, nombre, queja, registro, resolucion;
         private int _id;
 
-        public EditQueja(int _id, String fecha, String nombre, String queja, String registro, String resolucion)
+        public EditQueja(int _id, String fecha, String nombre, String queja, String registro, String resolucion):base()
         {
             InitializeComponent();
             this._id = _id;

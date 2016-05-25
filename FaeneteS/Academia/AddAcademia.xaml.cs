@@ -17,13 +17,13 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para AddAcademia.xaml
     /// </summary>
-    public partial class AddAcademia : Window
+    public partial class AddAcademia : WindowBase
     {
 
         private Conexion conexion = Conexion.Instancia;
         private String fecha, preparador, opositor, material;
 
-        public AddAcademia()
+        public AddAcademia():base()
         {
             InitializeComponent();
             foreach (String preparador in conexion.listadoPreparadores()) // Loop llena listBoxPreparadores

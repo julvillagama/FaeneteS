@@ -10,12 +10,9 @@ using System.Windows.Forms;
 
 namespace FaeneteS
 {
-    public partial class InformeCorreos : Form
+    public partial class InformeCorreos : FormBase
     {
-
-        private DataTable datos;
-
-        public InformeCorreos(DataTable datos)
+        public InformeCorreos(DataTable datos):base()
         {
             InitializeComponent();
             this.datos = datos;

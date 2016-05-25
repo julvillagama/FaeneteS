@@ -18,15 +18,12 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para Llamadas.xaml
     /// </summary>
-    public partial class Llamadas : Window
+    public partial class Llamadas : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
-        private DataTable datos = new DataTable();
         private int itemSeleccionado = 0;
         private int filtro = 0;
 
-        public Llamadas()
+        public Llamadas():base()
         {
             InitializeComponent();
             this.datos.Clear();

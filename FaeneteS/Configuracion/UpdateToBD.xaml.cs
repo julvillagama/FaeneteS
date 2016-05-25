@@ -8,11 +8,11 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para UpdateToBD.xaml
     /// </summary>
-    public partial class UpdateToBD : Window
+    public partial class UpdateToBD : WindowBase
     {
         public String texto { get; set; }
 
-        public UpdateToBD(String name, String trabajador)
+        public UpdateToBD(String name, String trabajador):base()
         {
             InitializeComponent();
             titulo.Content = titulo.Content.ToString() + " " + name;

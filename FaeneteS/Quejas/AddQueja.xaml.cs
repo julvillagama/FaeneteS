@@ -8,13 +8,11 @@ namespace FaeneteS.Quejas
     /// <summary>
     /// Lógica de interacción para AddQueja.xaml
     /// </summary>
-    public partial class AddQueja : Window
+    public partial class AddQueja : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
         private String fecha, nombre, queja, registro, resolucion;
 
-        public AddQueja()
+        public AddQueja():base()
         {
             InitializeComponent();
             foreach (String via in conexion.listadoRegistros()) // Loop llena listBoxRegistros

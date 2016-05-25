@@ -1,9 +1,10 @@
-﻿<Window x:Class="FaeneteS.AddToBD"
+﻿<base:WindowBase x:Class="FaeneteS.AddToBD"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FaeneteS"
+        xmlns:base="clr-namespace:FaeneteS"
         mc:Ignorable="d"
         Title="AddToBD" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Height="190" Width="300" Background="#FFFFFFFF" BorderBrush="Black" BorderThickness="2" WindowStyle="None">
     <Grid>
@@ -22,4 +23,4 @@
             <Button x:Name="btnCANCEL" Content="CANCELAR" Width="75" Click="btnCANCEL_Click" Margin="10,0,0,0" />
         </StackPanel>
     </Grid>
-</Window>
+</base:WindowBase>

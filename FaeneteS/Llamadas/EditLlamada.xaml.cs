@@ -17,14 +17,12 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para EditLlamada.xaml
     /// </summary>
-    public partial class EditLlamada : Window
+    public partial class EditLlamada : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
         private String fecha, nombre, consulta;
         private int _id;
 
-        public EditLlamada(int _id, String fecha, String nombre, String consulta)
+        public EditLlamada(int _id, String fecha, String nombre, String consulta):base()
         {
             InitializeComponent();
             this._id = _id;

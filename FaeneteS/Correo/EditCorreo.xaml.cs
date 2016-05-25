@@ -8,15 +8,13 @@ namespace FaeneteS.Correo
     /// <summary>
     /// Lógica de interacción para EditCorreo.xaml
     /// </summary>
-    public partial class EditCorreo : Window
+    public partial class EditCorreo : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
         private String fecha, remite, contenido, destino, empleado, estado;
         private Boolean entrada, salida, certificado, finalizado;
         private int _id;
 
-        public EditCorreo(int _id, String fecha, bool entrada, bool salida, Boolean certificado, String remite, String contenido, String destino, String empleado, String estado, Boolean finalizado)
+        public EditCorreo(int _id, String fecha, bool entrada, bool salida, Boolean certificado, String remite, String contenido, String destino, String empleado, String estado, Boolean finalizado):base()
         {
             InitializeComponent();
             this._id = _id;

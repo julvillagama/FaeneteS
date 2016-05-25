@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace FaeneteS
 {
-    class Conexion
+    public class Conexion
     {
         // variable estatica instanciandola a la misma clase
         private static Conexion conexion = null;

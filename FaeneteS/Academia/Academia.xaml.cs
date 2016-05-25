@@ -18,15 +18,12 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para Academia.xaml
     /// </summary>
-    public partial class Academia : Window
+    public partial class Academia : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
-        private DataTable datos = new DataTable();
         private int itemSeleccionado = 0;
         private int filtro = 0;
-
-        public Academia()
+        
+        public Academia():base()
         {           
             InitializeComponent();
             this.datos.Clear();

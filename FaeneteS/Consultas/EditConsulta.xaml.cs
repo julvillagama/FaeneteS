@@ -8,14 +8,12 @@ namespace FaeneteS.Consultas
     /// <summary>
     /// Lógica de interacción para EditConsulta.xaml
     /// </summary>
-    public partial class EditConsulta : Window
+    public partial class EditConsulta : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
         private String fecha, nombre, consulta, via, respuesta;
         private int _id;
 
-        public EditConsulta(int _id, String fecha, String nombre, String consulta, String via, String respuesta)
+        public EditConsulta(int _id, String fecha, String nombre, String consulta, String via, String respuesta):base()
         {
             InitializeComponent();
             this._id = _id;

@@ -18,13 +18,9 @@ namespace FaeneteS
     /// <summary>
     /// Lógica de interacción para Informe.xaml
     /// </summary>
-    public partial class Informe : Window
+    public partial class Informe : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
-        private DataTable datos = new DataTable();
-
-        public Informe()
+        public Informe():base()
         {
             InitializeComponent();
         }

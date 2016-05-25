@@ -8,14 +8,12 @@ namespace FaeneteS.Correo
     /// <summary>
     /// Lógica de interacción para AddCorreo.xaml
     /// </summary>
-    public partial class AddCorreo : Window
+    public partial class AddCorreo : WindowBase
     {
-
-        private Conexion conexion = Conexion.Instancia;
         private String fecha, remite, contenido, destino, empleado, estado;
         private Boolean entrada, salida, certificado, finalizado;
 
-        public AddCorreo()
+        public AddCorreo():base()
         {
             InitializeComponent();
         }
